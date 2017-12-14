@@ -1,1 +1,2 @@
-#Auto platform
+# Auto platform
+A distributive, agile development architecture that is based on Spring, SpringMVC and Mybatis. It provides a comprehensive set of public micro service module: centralized access control, content management, pay center, user management, storage system, configuration center, log analysis, task and notification. It provides service management, monitor and tracking, aims to provide enterprise-level development solution for small and medium enterprises. 
