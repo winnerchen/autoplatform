@@ -8,6 +8,11 @@
     <artifactId>autoplatform</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>auto-common</module>
+        <module>auto-cms</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -15,11 +20,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>
     </properties>
-    <modules>
-        <module>auto-common</module>
-        <module>auto-cms</module>
-        <module>auto-cms</module>
-    </modules>
+
 
 
 </project>

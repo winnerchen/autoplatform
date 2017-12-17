@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<!-- turn on package scanning -->
+	<typeAliases>
+		<package name="yiheng.chen.model" />
+	</typeAliases>
+
+	<plugins>
+		<!-- customized paging interceptor  -->
+		<plugin interceptor="com.zheng.interceptor.PageInterceptor">
+			<property name="pageSqlId" value=".*All$" />
+		</plugin>
+		<!-- paging plugin -->
+		<!-- package name of PageHelper -->
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<!--corresponding to your database type-->
+			<property name="dialect" value="mysql" />
+			<!-- default value of this parameter is false -->
+			<!-- when enabled，it uses the first paramter of RowBounds offset as pageNum -->
+			<!-- same as pageNum in startPage -->
+			<property name="offsetAsPageNum" value="true" />
+			<!-- default value is false -->
+			<!-- when enabled, it does count query when paging by RowBounds -->
+			<property name="rowBoundsWithCount" value="true" />
+			<!-- when enabled, it finds all the results if pageSize=0 or RowBounds.limit = 0 -->
+			<!-- （Equivalent to not perform paging query, but the return result is still Page type） -->
+			<property name="pageSizeZero" value="true" />
+			<!-- available in v3.3.0 - reasonable paging parameter，default value is false -->
+			<!-- when enabled，query the first page if pageNum<1, query the last page if pageNum>pages -->
+			<!-- when disabled, return null data if pageNum<1 or pageNum>pages -->
+			<property name="reasonable" value="false" />
+			<!-- available in v3.5.0 - to support startPage(Object params) function -->
+			<!-- add one `params` to config mapping parameters，used to get values from Map or ServletRequest -->
+			<!-- 可以配置pageNum,pageSize,count,pageSizeZero,reasonable,orderBy,不配置映射的用默认值 -->
+			<property name="params" value="pageNum=pageHelperStart;pageSize=pageHelperRows;" />
+			<!-- support passing paging parameters through Mapper interface parameters -->
+			<property name="supportMethodsArguments" value="false" />
+			<!-- 'always' return PageInfo type,'check' checks if the return type is PageInfo,'none' return Page -->
+			<property name="returnPageInfo" value="none" />
+		</plugin>
+	</plugins>
+
+</configuration>
