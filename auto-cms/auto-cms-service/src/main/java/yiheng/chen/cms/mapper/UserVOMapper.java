@@ -1,9 +1,8 @@
-package yiheng.chen.mapper;
+package yiheng.chen.cms.mapper;
 
 import org.springframework.stereotype.Repository;
-import yiheng.chen.cms.mapper.UserMapper;
 import yiheng.chen.cms.model.User;
-import yiheng.chen.model.UserVO;
+import yiheng.chen.cms.model.UserVO;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package yiheng.chen.service;
+package yiheng.chen.cms.service;
 
 /**
  * baseService interface

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import yiheng.chen.cms.model.User;
 import yiheng.chen.cms.model.UserExample;
-import yiheng.chen.service.UserService;
+import yiheng.chen.cms.service.UserService;
 import yiheng.chen.cms.util.Paginator;
 
 import javax.servlet.http.HttpServletRequest;

@@ -7,7 +7,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import yiheng.chen.cms.model.User;
-import yiheng.chen.model.UserVO;
+import yiheng.chen.cms.model.UserVO;
+import yiheng.chen.cms.service.UserService;
 
 /**
  * @Author: Yiheng Chen
