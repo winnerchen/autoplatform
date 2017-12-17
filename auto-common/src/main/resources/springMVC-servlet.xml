@@ -13,7 +13,7 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- scan controller -->
-	<context:component-scan base-package="**.controller" />
+	<context:component-scan base-package="**.*controller" />
 	<context:annotation-config />
 
 	<!-- support controller to return json -->
