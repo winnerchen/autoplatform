@@ -10,6 +10,7 @@
     <modules>
         <module>auto-cms-dao</module>
         <module>auto-cms-service</module>
+        <module>auto-cms-web</module>
     </modules>
     <packaging>pom</packaging>
     <name>auto-cms</name>
