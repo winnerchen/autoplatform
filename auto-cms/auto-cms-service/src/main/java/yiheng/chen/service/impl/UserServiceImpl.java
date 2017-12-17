@@ -3,9 +3,9 @@ package yiheng.chen.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import yiheng.chen.mapper.UserMapper;
+import yiheng.chen.cms.mapper.UserMapper;
 import yiheng.chen.mapper.UserVOMapper;
-import yiheng.chen.model.User;
+import yiheng.chen.cms.model.User;
 import yiheng.chen.model.UserVO;
 import yiheng.chen.service.UserService;
 

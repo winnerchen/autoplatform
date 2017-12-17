@@ -11,7 +11,7 @@
 
 	<plugins>
 		<!-- customized paging interceptor  -->
-		<plugin interceptor="yiheng.chen.interceptor.PageInterceptor">
+		<plugin interceptor="yiheng.chen.cms.interceptor.PageInterceptor">
 			<property name="pageSqlId" value=".*All$" />
 		</plugin>
 		<!-- paging plugin -->

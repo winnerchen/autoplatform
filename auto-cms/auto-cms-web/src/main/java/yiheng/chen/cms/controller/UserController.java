@@ -9,10 +9,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import yiheng.chen.model.User;
-import yiheng.chen.model.UserExample;
+import yiheng.chen.cms.model.User;
+import yiheng.chen.cms.model.UserExample;
 import yiheng.chen.service.UserService;
-import yiheng.chen.util.Paginator;
+import yiheng.chen.cms.util.Paginator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;

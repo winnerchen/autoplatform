@@ -1,4 +1,4 @@
-package yiheng.chen.interceptor;
+package yiheng.chen.cms.interceptor;
 
 import java.sql.Connection;
 import java.util.Map;
@@ -14,8 +14,7 @@ import org.apache.ibatis.plugin.Plugin;
 import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.SystemMetaObject;
-import yiheng.chen.util.Paginator;
-
+import yiheng.chen.cms.util.Paginator;
 
 
 @Intercepts({

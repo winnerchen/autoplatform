@@ -1,9 +1,9 @@
-package yiheng.chen.mapper;
+package yiheng.chen.cms.mapper;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import yiheng.chen.model.User;
-import yiheng.chen.model.UserExample;
+import yiheng.chen.cms.model.User;
+import yiheng.chen.cms.model.UserExample;
 
 public interface UserMapper {
     int countByExample(UserExample example);

@@ -1,9 +1,9 @@
-package yiheng.chen.mapper;
+package yiheng.chen.cms.mapper;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import yiheng.chen.model.Book;
-import yiheng.chen.model.BookExample;
+import yiheng.chen.cms.model.Book;
+import yiheng.chen.cms.model.BookExample;
 
 public interface BookMapper {
     int countByExample(BookExample example);
@@ -20,8 +20,7 @@ public interface BookMapper {
 
     Book selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") Book record, @Param("example") BookExample
-            example);
+    int updateByExampleSelective(@Param("record") Book record, @Param("example") BookExample example);
 
     int updateByExample(@Param("record") Book record, @Param("example") BookExample example);
 

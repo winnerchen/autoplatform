@@ -23,16 +23,23 @@
 			password="${jdbc.password}" />
 
 		<!-- generate model -->
-		<javaModelGenerator targetPackage="yiheng.chen.model" targetProject="src/main/java" />
+		<javaModelGenerator targetPackage="yiheng.chen.cms.model" targetProject="src/main/java" />
 
 		<!-- generate MapperXML -->
-		<sqlMapGenerator targetPackage="yiheng.chen.mapper" targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="yiheng.chen.cms.mapper" targetProject="src/main/java" />
 
 		<!-- generate Mapper interface -->
-		<javaClientGenerator targetPackage="yiheng.chen.mapper" targetProject="src/main/java" type="XMLMAPPER" />
+		<javaClientGenerator targetPackage="yiheng.chen.cms.mapper" targetProject="src/main/java" type="XMLMAPPER" />
 
 		<!-- tables that needs to be mapped -->
 		<table tableName="upms_user" domainObjectName="User"></table>
-		<!--<table tableName="book" domainObjectName="Book"></table>-->
+		<table tableName="book" domainObjectName="Book"></table>
+
+		<table tableName="cms_article" domainObjectName="CmsArticle"></table>
+		<table tableName="cms_category" domainObjectName="CmsCategory"></table>
+		<table tableName="cms_tag" domainObjectName="CmsTag"></table>
+		<table tableName="cms_article_category" domainObjectName="CmsArticleCategory"></table>
+		<table tableName="cms_article_tag" domainObjectName="CmsArticleTag"></table>
+		<table tableName="cms_category_tag" domainObjectName="CmsCategoryTag"></table>
 	</context>
 </generatorConfiguration>

@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import yiheng.chen.model.User;
+import yiheng.chen.cms.model.User;
 import yiheng.chen.service.impl.UserServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;

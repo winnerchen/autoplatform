@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
-import yiheng.chen.model.User;
+import yiheng.chen.cms.model.User;
 import yiheng.chen.model.UserVO;
 
 /**

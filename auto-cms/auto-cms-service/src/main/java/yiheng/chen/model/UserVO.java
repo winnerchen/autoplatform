@@ -1,5 +1,7 @@
 package yiheng.chen.model;
 
+import yiheng.chen.cms.model.User;
+
 import java.awt.print.Book;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package yiheng.chen.model;
+package yiheng.chen.cms.model;
 
 import java.util.ArrayList;
 import java.util.List;

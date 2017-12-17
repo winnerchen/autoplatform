@@ -1,4 +1,4 @@
-package yiheng.chen.model;
+package yiheng.chen.cms.model;
 
 public class User {
     private Integer id;

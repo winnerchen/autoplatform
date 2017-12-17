@@ -1,8 +1,8 @@
 package yiheng.chen.service;
 
 
-import yiheng.chen.mapper.UserMapper;
-import yiheng.chen.model.User;
+import yiheng.chen.cms.mapper.UserMapper;
+import yiheng.chen.cms.model.User;
 import yiheng.chen.model.UserVO;
 
 import java.util.List;
