@@ -1,34 +1,26 @@
 package yiheng.chen.model;
 
 public class User {
-    private Integer userId;
+    private Integer id;
 
     private String username;
 
     private String password;
 
-    private String salt;
+    private String nickname;
 
-    private String realname;
-
-    private String avatar;
-
-    private String phone;
-
-    private String email;
-
-    private Byte sex;
-
-    private Byte locked;
+    private Integer sex;
 
     private Long ctime;
 
-    public Integer getUserId() {
-        return userId;
+    private String content;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -47,60 +39,20 @@ public class User {
         this.password = password;
     }
 
-    public String getSalt() {
-        return salt;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public String getRealname() {
-        return realname;
-    }
-
-    public void setRealname(String realname) {
-        this.realname = realname;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Byte getSex() {
+    public Integer getSex() {
         return sex;
     }
 
-    public void setSex(Byte sex) {
+    public void setSex(Integer sex) {
         this.sex = sex;
-    }
-
-    public Byte getLocked() {
-        return locked;
-    }
-
-    public void setLocked(Byte locked) {
-        this.locked = locked;
     }
 
     public Long getCtime() {
@@ -109,5 +61,13 @@ public class User {
 
     public void setCtime(Long ctime) {
         this.ctime = ctime;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

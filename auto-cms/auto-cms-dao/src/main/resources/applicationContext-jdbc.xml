@@ -14,6 +14,7 @@
           http://www.springframework.org/schema/aop
           http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+
     <!-- import jdbc config file -->
     <context:property-placeholder location="classpath:jdbc.properties" />
 
@@ -51,7 +52,7 @@
     </bean>
     <!-- the package name of mappers，Spring automatically finds mappers under that package -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.zheng.mapper" />
+        <property name="basePackage" value="yiheng.chen.mapper" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
 

@@ -1,10 +1,9 @@
 package yiheng.chen.mapper;
 
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
 import yiheng.chen.model.Book;
 import yiheng.chen.model.BookExample;
-import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 
 public interface BookMapper {
     int countByExample(BookExample example);
