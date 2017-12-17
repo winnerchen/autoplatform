@@ -16,5 +16,8 @@
 
 	<!-- load service -->
 	<context:component-scan base-package="**.service" />
+
+	<import resource="classpath:applicationContext-ehcache.xml"/>
+	<import resource="classpath:applicationContext-jdbc.xml"/>
 	
 </beans>

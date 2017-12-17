@@ -69,9 +69,9 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <excludes>
+                <!--<excludes>
                     <exclude>src/main/resources/profiles/*</exclude>
-                </excludes>
+                </excludes>-->
                 <filtering>true</filtering>
             </resource>
         </resources>
@@ -84,10 +84,10 @@
                 <configuration>
                     <scanIntervalSeconds>3</scanIntervalSeconds>
                     <webApp>
-                        <contextPath>/</contextPath>
+                        <contextPath>/cms-web</contextPath>
                     </webApp>
                     <httpConnector>
-                        <port>1111</port>
+                        <port>8088</port>
                     </httpConnector>
                     <reload>automatic</reload>
                 </configuration>
