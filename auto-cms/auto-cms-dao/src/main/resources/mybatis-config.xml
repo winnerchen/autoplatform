@@ -4,9 +4,9 @@
 
 <configuration>
 
-	<!-- turn on package scanning -->
+	<!-- enable package scanning -->
 	<typeAliases>
-		<package name="yiheng.chen.model" />
+		<package name="yiheng.chen.cms.model" />
 	</typeAliases>
 
 	<plugins>
