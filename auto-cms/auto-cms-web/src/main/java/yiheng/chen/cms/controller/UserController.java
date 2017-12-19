@@ -67,19 +67,19 @@ public class UserController {
     public String list(
             @RequestParam(required = false, defaultValue = "1") int page,
             @RequestParam(required = false, defaultValue = "20") int rows,
-            HttpServletRequest request, Model model) {
-
+            HttpServletRequest request) {
+        // 查询参数
+        String clumns = " * ";
+        String condition = " id>0 ";
+        String order = " id asc ";
+        Map<String,Object> parameters = new HashMap<String, Object>();
+        parameters.put("clumns", clumns);
+        parameters.put("condition", condition);
+        parameters.put("order", order);
+        // 创建分页对象
         UserExample userExample = new UserExample();
         userExample.createCriteria()
                 .andIdGreaterThan(0);
-        userExample.setOffset((page -1) * rows);
-        userExample.setLimit(rows);
-        userExample.setDistinct(false);
-        userExample.setOrderByClause(" id desc ");
-        List<User> users = userService.getMapper().selectByExample(userExample);
-        model.addAttribute("users", users);
-
-        // 创建分页对象
         long total = userService.getMapper().countByExample(userExample);
         Paginator paginator = new Paginator();
         paginator.setTotal(total);
@@ -88,11 +88,17 @@ public class UserController {
         paginator.setParam("page");
         paginator.setUrl(request.getRequestURI());
         paginator.setQuery(request.getQueryString());
-        model.addAttribute("paginator", paginator);
+        // 调用有分页功能的方法
+        parameters.put("paginator", paginator);
+        List<User> users = userService.getMapper().selectByExample(userExample);
+        // 返回数据
+        request.setAttribute("users", users);
+        request.setAttribute("paginator", paginator);
 
+
+        //PageHelper.startPage(1, 10);
         return "/user/list";
     }
-
 
     /**
      * 新增get
@@ -119,23 +125,7 @@ public class UserController {
         }
         user.setCtime(System.currentTimeMillis());
         userService.getMapper().insertSelective(user);
-        return "redirect:/user/list";
-    }
-
-    /**
-     * 新增post2,返回自增主键值
-     * @param user
-     * @param binding
-     * @return
-     */
-    @RequestMapping(value = "/add2", method = RequestMethod.POST)
-    public String add2(@Valid User user, BindingResult binding) {
-        if (binding.hasErrors()) {
-            return "user/add";
-        }
-        user.setCtime(System.currentTimeMillis());
-        userService.insertAutoKey(user);
-        System.out.println(user.getId());
+        logger.info("insert userId is 为：{}", user.getId());
         return "redirect:/user/list";
     }
 

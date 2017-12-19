@@ -13,8 +13,6 @@ public interface UserVOMapper extends UserMapper {
 
 	UserVO selectUserWithBook(int id);
 	
-	List<User> selectAll(Map<String, Object> map);
-	
-	void insertAutoKey(User user);
+
 	
 }

@@ -41,25 +41,4 @@ public class UserServiceImpl implements UserService {
 	public UserVO selectUserWithBook(int id) {
 		return userVOMapper.selectUserWithBook(id);
 	}
-
-	/**
-	 * conditional user list query
-	 * @param map
-	 * @return
-	 */
-	@Override
-	public List<User> selectAll(Map<String, Object> map) {
-		return userVOMapper.selectAll(map);
-	}
-
-	/**
-	 * insert user
-	 * @param user
-	 */
-	@Override
-	public void insertAutoKey(User user) {
-		userVOMapper.insertAutoKey(user);
-	}
-
-	
 }

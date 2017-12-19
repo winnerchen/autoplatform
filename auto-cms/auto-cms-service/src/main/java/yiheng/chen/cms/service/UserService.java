@@ -21,17 +21,5 @@ public interface UserService extends BaseService<UserMapper> {
 	 */
 	UserVO selectUserWithBook(int id);
 
-	/**
-	 * conditional user list query
-	 * @param map
-	 * @return
-	 */
-	List<User> selectAll(Map<String, Object> map);
 
-	/**
-	 * insert user
-	 * @param user
-	 */
-	void insertAutoKey(User user);
-	
 }
