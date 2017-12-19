@@ -35,10 +35,10 @@ public class UserServiceTest {
 
         UserVO userVO = userService.selectUserWithBook(1);
         System.out.println("======================my result=====================");
-        System.out.println(userVO.getBooks().size());
+        System.out.println(userVO==null?"null":userVO.getBooks().size());
         // 自动生成接口调用
         User user2 = userService.getMapper().selectByPrimaryKey(1);
-        System.out.println(user2.getNickname());
+        System.out.println(user2==null? "null":user2.getNickname());
 
 
         // Create a cache manager

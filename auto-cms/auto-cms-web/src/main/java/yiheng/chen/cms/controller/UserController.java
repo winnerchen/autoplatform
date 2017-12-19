@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import yiheng.chen.cms.model.User;
 import yiheng.chen.cms.model.UserExample;
 import yiheng.chen.cms.service.UserService;
-import yiheng.chen.cms.util.Paginator;
+import yiheng.chen.common.util.Paginator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -67,19 +67,19 @@ public class UserController {
     public String list(
             @RequestParam(required = false, defaultValue = "1") int page,
             @RequestParam(required = false, defaultValue = "20") int rows,
-            HttpServletRequest request) {
-        // 查询参数
-        String clumns = " * ";
-        String condition = " id>0 ";
-        String order = " id asc ";
-        Map<String,Object> parameters = new HashMap<String, Object>();
-        parameters.put("clumns", clumns);
-        parameters.put("condition", condition);
-        parameters.put("order", order);
-        // 创建分页对象
+            HttpServletRequest request, Model model) {
+
         UserExample userExample = new UserExample();
         userExample.createCriteria()
                 .andIdGreaterThan(0);
+        userExample.setOffset((page -1) * rows);
+        userExample.setLimit(rows);
+        userExample.setDistinct(false);
+        userExample.setOrderByClause(" id desc ");
+        List<User> users = userService.getMapper().selectByExample(userExample);
+        model.addAttribute("users", users);
+
+        // 创建分页对象
         long total = userService.getMapper().countByExample(userExample);
         Paginator paginator = new Paginator();
         paginator.setTotal(total);
@@ -88,17 +88,11 @@ public class UserController {
         paginator.setParam("page");
         paginator.setUrl(request.getRequestURI());
         paginator.setQuery(request.getQueryString());
-        // 调用有分页功能的方法
-        parameters.put("paginator", paginator);
-        List<User> users = userService.selectAll(parameters);
-        // 返回数据
-        request.setAttribute("users", users);
-        request.setAttribute("paginator", paginator);
+        model.addAttribute("paginator", paginator);
 
-
-        //PageHelper.startPage(1, 10);
         return "/user/list";
     }
+
 
     /**
      * 新增get

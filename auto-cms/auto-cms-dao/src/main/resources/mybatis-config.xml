@@ -9,39 +9,39 @@
 		<package name="yiheng.chen.cms.model" />
 	</typeAliases>
 
-	<plugins>
-		<!-- customized paging interceptor  -->
+	<!--<plugins>
+		&lt;!&ndash; customized paging interceptor  &ndash;&gt;
 		<plugin interceptor="yiheng.chen.cms.interceptor.PageInterceptor">
 			<property name="pageSqlId" value=".*All$" />
 		</plugin>
-		<!-- paging plugin -->
-		<!-- package name of PageHelper -->
+		&lt;!&ndash; paging plugin &ndash;&gt;
+		&lt;!&ndash; package name of PageHelper &ndash;&gt;
 		<plugin interceptor="com.github.pagehelper.PageHelper">
-			<!--corresponding to your database type-->
+			&lt;!&ndash;corresponding to your database type&ndash;&gt;
 			<property name="dialect" value="mysql" />
-			<!-- default value of this parameter is false -->
-			<!-- when enabled，it uses the first paramter of RowBounds offset as pageNum -->
-			<!-- same as pageNum in startPage -->
+			&lt;!&ndash; default value of this parameter is false &ndash;&gt;
+			&lt;!&ndash; when enabled，it uses the first paramter of RowBounds offset as pageNum &ndash;&gt;
+			&lt;!&ndash; same as pageNum in startPage &ndash;&gt;
 			<property name="offsetAsPageNum" value="true" />
-			<!-- default value is false -->
-			<!-- when enabled, it does count query when paging by RowBounds -->
+			&lt;!&ndash; default value is false &ndash;&gt;
+			&lt;!&ndash; when enabled, it does count query when paging by RowBounds &ndash;&gt;
 			<property name="rowBoundsWithCount" value="true" />
-			<!-- when enabled, it finds all the results if pageSize=0 or RowBounds.limit = 0 -->
-			<!-- （Equivalent to not perform paging query, but the return result is still Page type） -->
+			&lt;!&ndash; when enabled, it finds all the results if pageSize=0 or RowBounds.limit = 0 &ndash;&gt;
+			&lt;!&ndash; （Equivalent to not perform paging query, but the return result is still Page type） &ndash;&gt;
 			<property name="pageSizeZero" value="true" />
-			<!-- available in v3.3.0 - reasonable paging parameter，default value is false -->
-			<!-- when enabled，query the first page if pageNum<1, query the last page if pageNum>pages -->
-			<!-- when disabled, return null data if pageNum<1 or pageNum>pages -->
+			&lt;!&ndash; available in v3.3.0 - reasonable paging parameter，default value is false &ndash;&gt;
+			&lt;!&ndash; when enabled，query the first page if pageNum<1, query the last page if pageNum>pages &ndash;&gt;
+			&lt;!&ndash; when disabled, return null data if pageNum<1 or pageNum>pages &ndash;&gt;
 			<property name="reasonable" value="false" />
-			<!-- available in v3.5.0 - to support startPage(Object params) function -->
-			<!-- add one `params` to config mapping parameters，used to get values from Map or ServletRequest -->
-			<!-- 可以配置pageNum,pageSize,count,pageSizeZero,reasonable,orderBy,不配置映射的用默认值 -->
+			&lt;!&ndash; available in v3.5.0 - to support startPage(Object params) function &ndash;&gt;
+			&lt;!&ndash; add one `params` to config mapping parameters，used to get values from Map or ServletRequest &ndash;&gt;
+			&lt;!&ndash; 可以配置pageNum,pageSize,count,pageSizeZero,reasonable,orderBy,不配置映射的用默认值 &ndash;&gt;
 			<property name="params" value="pageNum=pageHelperStart;pageSize=pageHelperRows;" />
-			<!-- support passing paging parameters through Mapper interface parameters -->
+			&lt;!&ndash; support passing paging parameters through Mapper interface parameters &ndash;&gt;
 			<property name="supportMethodsArguments" value="false" />
-			<!-- 'always' return PageInfo type,'check' checks if the return type is PageInfo,'none' return Page -->
+			&lt;!&ndash; 'always' return PageInfo type,'check' checks if the return type is PageInfo,'none' return Page &ndash;&gt;
 			<property name="returnPageInfo" value="none" />
 		</plugin>
-	</plugins>
+	</plugins>-->
 
 </configuration>
