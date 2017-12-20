@@ -34,7 +34,7 @@ import static yiheng.chen.cms.controller.BaseController.*;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    private static Logger logger = LoggerFactory.getLogger(UserController.class);
+    private static Logger _log = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserService userService;
@@ -116,13 +116,13 @@ public class UserController {
     public String add(@Valid User user, BindingResult binding) {
         if (binding.hasErrors()) {
             for (ObjectError error : binding.getAllErrors()) {
-                logger.error(error.getDefaultMessage());
+                _log.error(error.getDefaultMessage());
             }
             return "/user/add";
         }
         user.setCtime(System.currentTimeMillis());
         userService.getMapper().insertSelective(user);
-        logger.info("insert userId is 为：{}", user.getId());
+        _log.info("insert userId is 为：{}", user.getId());
         return "redirect:/user/list";
     }
 

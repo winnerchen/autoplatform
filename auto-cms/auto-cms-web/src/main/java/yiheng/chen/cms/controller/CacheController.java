@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/cache")
 public class CacheController {
 
-    private static Logger logger = LoggerFactory.getLogger(CacheController.class);
+    private static Logger _log = LoggerFactory.getLogger(CacheController.class);
 
     private final static String CACHE_NAME = "ehcache_common";
 
@@ -61,7 +61,7 @@ public class CacheController {
         String key = request.getParameter("key");
         Object object = EhCacheUtil.get(CACHE_NAME, key);
         if (null == object) {
-            logger.debug("【Ehcache】没有找到key={}的记录！", key);
+            _log.debug("【Ehcache】没有找到key={}的记录！", key);
             return "value";
         }
         return object;
