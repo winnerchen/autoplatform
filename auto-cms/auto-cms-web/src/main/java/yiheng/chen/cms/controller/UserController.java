@@ -9,8 +9,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import yiheng.chen.cms.model.User;
-import yiheng.chen.cms.model.UserExample;
+import yiheng.chen.cms.dao.model.User;
+import yiheng.chen.cms.dao.model.UserExample;
 import yiheng.chen.cms.service.UserService;
 import yiheng.chen.common.util.Paginator;
 
@@ -22,10 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static yiheng.chen.cms.controller.BaseController.RESULT;
-import static yiheng.chen.cms.controller.BaseController.DATA;
-import static yiheng.chen.cms.controller.BaseController.FAILED;
-import static yiheng.chen.cms.controller.BaseController.SUCCESS;
+import static yiheng.chen.cms.controller.BaseController.*;
 
 
 /**
