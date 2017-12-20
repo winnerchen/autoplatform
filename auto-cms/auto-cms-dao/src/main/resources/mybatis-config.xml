@@ -3,6 +3,10 @@
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+	<!--enable cache-->
+	<settings>
+		<setting name="cacheEnabled" value="true"/>
+	</settings>
 
 	<!-- enable package scanning -->
 	<typeAliases>
