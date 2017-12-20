@@ -48,11 +48,11 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="configLocation" value="classpath:mybatis-config.xml" />
-        <property name="mapperLocations" value="classpath:yiheng/chen/cms/mapper/*Mapper.xml" />
+        <property name="mapperLocations" value="classpath:yiheng/chen/cms/dao/mapper/*Mapper.xml" />
     </bean>
     <!-- the package name of mappers，Spring automatically finds mappers under that package -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="yiheng.chen.cms.mapper" />
+        <property name="basePackage" value="yiheng.chen.cms.dao.mapper" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
 

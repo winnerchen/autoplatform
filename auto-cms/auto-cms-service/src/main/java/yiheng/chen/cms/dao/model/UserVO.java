@@ -1,4 +1,4 @@
-package yiheng.chen.cms.model;
+package yiheng.chen.cms.dao.model;
 
 import java.awt.print.Book;
 import java.util.List;

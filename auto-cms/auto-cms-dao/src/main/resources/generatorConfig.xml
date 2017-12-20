@@ -43,13 +43,13 @@
 			password="${jdbc.password}" />
 
 		<!-- generate model -->
-		<javaModelGenerator targetPackage="yiheng.chen.cms.model" targetProject="src/main/java" />
+		<javaModelGenerator targetPackage="yiheng.chen.cms.dao.model" targetProject="src/main/java" />
 
 		<!-- generate MapperXML -->
-		<sqlMapGenerator targetPackage="yiheng.chen.cms.mapper" targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="yiheng.chen.cms.dao.mapper" targetProject="src/main/java" />
 
 		<!-- generate Mapper interface -->
-		<javaClientGenerator targetPackage="yiheng.chen.cms.mapper" targetProject="src/main/java" type="XMLMAPPER" />
+		<javaClientGenerator targetPackage="yiheng.chen.cms.dao.mapper" targetProject="src/main/java" type="XMLMAPPER" />
 
 		<!-- tables that needs to be mapped -->
 		<table tableName="user" domainObjectName="User">

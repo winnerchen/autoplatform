@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
-
-
-import yiheng.chen.cms.model.User;
-import yiheng.chen.cms.model.UserVO;
+import yiheng.chen.cms.dao.model.UserVO;
 
 /**
  * @Author: Yiheng Chen
@@ -37,8 +34,6 @@ public class UserServiceTest {
         System.out.println("======================my result=====================");
         System.out.println(userVO==null?"null":userVO.getBooks().size());
         // 自动生成接口调用
-        User user2 = userService.getMapper().selectByPrimaryKey(1);
-        System.out.println(user2==null? "null":user2.getNickname());
 
 
         // Create a cache manager
@@ -63,4 +58,6 @@ public class UserServiceTest {
         System.out.println(cacheElement.getObjectValue());
 
     }
+
+
 }
