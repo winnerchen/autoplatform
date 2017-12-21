@@ -16,6 +16,9 @@
 	<context:component-scan base-package="**.*controller" />
 	<context:annotation-config />
 
+	<!-- 根目录'/'对应页面 -->
+	<mvc:view-controller path="/" view-name="/index"/>
+
 	<!-- support controller to return json -->
 	<mvc:annotation-driven>
 		<mvc:message-converters>
