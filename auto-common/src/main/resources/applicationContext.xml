@@ -17,6 +17,10 @@
 	<!-- load service -->
 	<context:component-scan base-package="**.service" />
 
+	<!-- 启动时初始化Spring上下文环境工具类 -->
+	<!--initialize Spring context util on start up-->
+	<bean id="springContextUtil" class="yiheng.chen.common.util.SpringContextUtil"></bean>
+
 	<import resource="classpath:applicationContext-ehcache.xml"/>
 	<import resource="classpath:applicationContext-jdbc.xml"/>
 	

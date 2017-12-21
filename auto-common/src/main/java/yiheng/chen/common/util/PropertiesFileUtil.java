@@ -5,12 +5,7 @@ import java.util.HashMap;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
-/**
- * @Author: Yiheng Chen
- * @Description: utils for loading .properties file
- * @Date: Created in 10:47 2017/12/18
- * @Modified by:
- */
+
 public class PropertiesFileUtil {
 
     // 当打开多个资源文件时，缓存资源文件
