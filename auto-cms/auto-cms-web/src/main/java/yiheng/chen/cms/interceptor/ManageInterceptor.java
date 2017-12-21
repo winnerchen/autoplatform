@@ -2,8 +2,8 @@ package yiheng.chen.cms.interceptor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,14 +14,14 @@ import javax.servlet.http.HttpServletResponse;
  * @Date: Created in 13:34 2017/12/21
  * @Modified by:
  */
-public class ManageInterceptor implements HandlerInterceptor {
+public class ManageInterceptor extends HandlerInterceptorAdapter {
     private static Logger _log = LoggerFactory.getLogger(ManageInterceptor.class);
 
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         _log.info("ManageInterceptor==>preHandle");
-        return false;
+        return true;
     }
 
     @Override
