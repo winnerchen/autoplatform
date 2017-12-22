@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="yiheng.auto.cms.dao.mapper.CmsArticleCategoryMapper" >
+<mapper namespace="yiheng.chen.cms.dao.mapper.CmsArticleCategoryMapper" >
   <resultMap id="BaseResultMap" type="yiheng.chen.cms.dao.model.CmsArticleCategory" >
     <id column="article_category_id" property="articleCategoryId" jdbcType="INTEGER" />
     <result column="article_id" property="articleId" jdbcType="INTEGER" />
@@ -186,5 +186,5 @@
       category_id = #{categoryId,jdbcType=INTEGER}
     where article_category_id = #{articleCategoryId,jdbcType=INTEGER}
   </update>
-  <cache eviction="LRU" flushInterval="60000" readOnly="true" size="1024" />
+  <cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
 </mapper>
