@@ -1,7 +1,6 @@
 package yiheng.chen.cms.dao.mapper;
 
 import org.springframework.stereotype.Repository;
-import yiheng.auto.cms.dao.mapper.UserMapper;
 import yiheng.chen.cms.dao.model.UserVO;
 
 

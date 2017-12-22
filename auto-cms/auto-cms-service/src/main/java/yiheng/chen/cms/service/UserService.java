@@ -1,7 +1,7 @@
 package yiheng.chen.cms.service;
 
 
-import yiheng.auto.cms.dao.mapper.UserMapper;
+import yiheng.chen.cms.dao.mapper.UserMapper;
 import yiheng.chen.cms.dao.model.UserVO;
 
 

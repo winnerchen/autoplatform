@@ -1,9 +1,11 @@
 package yiheng.chen.cms.service.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import yiheng.auto.cms.dao.mapper.UserMapper;
+import yiheng.chen.cms.dao.mapper.UserMapper;
 import yiheng.chen.cms.dao.mapper.UserVOMapper;
 import yiheng.chen.cms.dao.model.UserVO;
 import yiheng.chen.cms.service.UserService;
@@ -12,6 +14,8 @@ import yiheng.chen.cms.service.UserService;
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
+
+	private static Logger _log = LoggerFactory.getLogger(UserServiceImpl.class);
 
 	@Autowired
 	private UserMapper userMapper;
