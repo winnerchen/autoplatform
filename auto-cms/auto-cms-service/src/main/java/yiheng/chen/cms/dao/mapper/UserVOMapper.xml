@@ -14,7 +14,7 @@
 		<result column="sex" property="sex"/>
 		<result column="ctime" property="ctime"/>
 		<result column="content" property="content" />
-		<collection column="userid" property="books" ofType="Book">
+		<collection column="userid" property="books" ofType="book">
 			<id column="b_id" property="id"/>
 			<result column="userid" property="userid"/>
 			<result column="name" property="name"/>
