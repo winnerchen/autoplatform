@@ -19,6 +19,7 @@
 </div>
 <div id="main">
 	<form id="form" method="post">
+	<input type="hidden" name="_csrf" value="${_csrf.token}" />
 	<table border="1">
 		<caption>Add user</caption>
 		<tr><td>Username：<font color="#cc0000">*</font></td><td><input id="username" type="text" name="username" placeholder="Required" required="true" maxlength="20" autofocus value=""/></td></tr>
