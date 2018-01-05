@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>yiheng.chen.autoplatform</groupId>
-    <artifactId>auto-oos</artifactId>
+    <artifactId>auto-oss</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>auto-oos-sdk</module>
-        <module>auto-oos-web</module>
+        <module>auto-oss-sdk</module>
+        <module>auto-oss-web</module>
     </modules>
 
     <packaging>pom</packaging>
