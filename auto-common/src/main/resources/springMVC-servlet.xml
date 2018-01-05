@@ -19,7 +19,7 @@
 	<!-- 根目录'/'对应页面 -->
 	<mvc:view-controller path="/" view-name="/index"/>
 
-	<!-- support controller to return json -->
+	<!-- response type for responseBody -->
 	<mvc:annotation-driven>
 		<mvc:message-converters>
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
