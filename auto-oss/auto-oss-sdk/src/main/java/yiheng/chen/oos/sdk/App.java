@@ -14,11 +14,11 @@ import java.io.IOException;
  * @Modified by:
  */
 public class App {
-    //设置好账号的ACCESS_KEY和SECRET_KEY
+    /*//设置好账号的ACCESS_KEY和SECRET_KEY
     String ACCESS_KEY = "";
     String SECRET_KEY = "";
     //要上传的空间
-    String bucketname = "zheng";
+    String bucketname = "chen";
     //上传到七牛后保存的文件名
     String key = "my-java.png";
     //上传文件的路径
@@ -54,5 +54,5 @@ public class App {
     }
     public static void main(String[] args) throws IOException {
         new App().upload();
-    }
+    }*/
 }
