@@ -11,9 +11,7 @@
     <modules>
         <module>auto-common</module>
         <module>auto-cms</module>
-        <module>auto-oos</module>
-        <module>auto-oos</module>
-        <module>auto-oos</module>
+        <module>auto-oss</module>
     </modules>
 
     <properties>
