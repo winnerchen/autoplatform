@@ -16,7 +16,7 @@ public class TestTaskImpl implements TestTask {
     @Scheduled(cron = "0/5 * * * * ?")
     @Override
     public void test() {
-        System.out.println("Task");
+        //System.out.println("Task");
     }
 
 }
