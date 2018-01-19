@@ -23,8 +23,10 @@
 	<!--initialize Spring context util on start up-->
 	<bean id="springContextUtil" class="yiheng.chen.common.util.SpringContextUtil"></bean>
 
-	<!--<import resource="classpath:applicationContext-ehcache.xml"/>-->
+	<import resource="classpath:applicationContext-ehcache.xml"/>
 	<import resource="classpath:applicationContext-jdbc.xml"/>
+<!--
 	<import resource="classpath:applicationContext-security.xml"/>
+-->
 
 </beans>
