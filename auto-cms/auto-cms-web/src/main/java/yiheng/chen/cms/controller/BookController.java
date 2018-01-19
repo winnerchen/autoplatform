@@ -50,6 +50,7 @@ public class BookController {
         BookExample bookExample = new BookExample();
         List<Book> books = bookMapper.selectByExample(bookExample);
         model.addAttribute("books", books);
+        int i=1;
         return "/book/list";
 
     }
