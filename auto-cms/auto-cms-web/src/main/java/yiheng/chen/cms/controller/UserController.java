@@ -76,7 +76,7 @@ public class UserController {
         // 创建分页对象
         UserExample userExample = new UserExample();
         userExample.createCriteria()
-                .andIdGreaterThan(0);
+                .andUserIdGreaterThan(0);
         long total = userService.getMapper().countByExample(userExample);
         Paginator paginator = new Paginator();
         paginator.setTotal(total);
@@ -122,7 +122,7 @@ public class UserController {
         }
         user.setCtime(System.currentTimeMillis());
         userService.getMapper().insertSelective(user);
-        _log.info("insert userId is 为：{}", user.getId());
+        _log.info("insert userId is 为：{}", user.getUserId());
         return "redirect:/user/list";
     }
 

@@ -92,8 +92,8 @@ public class HelloController {
         _log.debug(ReflectionToStringBuilder.toString(user));
 
         // process business operation, e.g. database persistence
-        user.setId(123);
-        return "redirect:view2/" + user.getId();
+        user.setUserId(123);
+        return "redirect:view2/" + user.getUserId();
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.GET)
